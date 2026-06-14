@@ -6,36 +6,7 @@
 	objectVersion = 77;
 	objects = {
 
-/* Begin PBXBuildFile section */
-		329F41502FA3B48100B28A30 /* DJI BLE Control Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 329F414F2FA3B48100B28A30 /* DJI BLE Control Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-/* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		329F41512FA3B48100B28A30 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 329F41432FA3B48100B28A30 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 329F414E2FA3B48100B28A30;
-			remoteInfo = "DJI BLE Control Watch App";
-		};
-/* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		329F415F2FA3B48200B28A30 /* Embed Watch Content */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
-			dstSubfolderSpec = 16;
-			files = (
-				329F41502FA3B48100B28A30 /* DJI BLE Control Watch App.app in Embed Watch Content */,
-			);
-			name = "Embed Watch Content";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
-		329F41492FA3B48100B28A30 /* DJI BLE Control.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DJI BLE Control.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		329F414F2FA3B48100B28A30 /* DJI BLE Control Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DJI BLE Control Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -69,7 +40,6 @@
 		329F414A2FA3B48100B28A30 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				329F41492FA3B48100B28A30 /* DJI BLE Control.app */,
 				329F414F2FA3B48100B28A30 /* DJI BLE Control Watch App.app */,
 			);
 			name = Products;
@@ -78,25 +48,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		329F41482FA3B48100B28A30 /* DJI BLE Control */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 329F41602FA3B48200B28A30 /* Build configuration list for PBXNativeTarget "DJI BLE Control" */;
-			buildPhases = (
-				329F41472FA3B48100B28A30 /* Resources */,
-				329F415F2FA3B48200B28A30 /* Embed Watch Content */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				329F41522FA3B48100B28A30 /* PBXTargetDependency */,
-			);
-			name = "DJI BLE Control";
-			packageProductDependencies = (
-			);
-			productName = "DJI BLE Control";
-			productReference = 329F41492FA3B48100B28A30 /* DJI BLE Control.app */;
-			productType = "com.apple.product-type.application.watchapp2-container";
-		};
 		329F414E2FA3B48100B28A30 /* DJI BLE Control Watch App */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 329F415C2FA3B48200B28A30 /* Build configuration list for PBXNativeTarget "DJI BLE Control Watch App" */;
@@ -129,9 +80,6 @@
 				LastSwiftUpdateCheck = 2640;
 				LastUpgradeCheck = 2640;
 				TargetAttributes = {
-					329F41482FA3B48100B28A30 = {
-						CreatedOnToolsVersion = 26.4.1;
-					};
 					329F414E2FA3B48100B28A30 = {
 						CreatedOnToolsVersion = 26.4.1;
 					};
@@ -151,20 +99,12 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				329F41482FA3B48100B28A30 /* DJI BLE Control */,
 				329F414E2FA3B48100B28A30 /* DJI BLE Control Watch App */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		329F41472FA3B48100B28A30 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		329F414D2FA3B48100B28A30 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -183,14 +123,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		329F41522FA3B48100B28A30 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 329F414E2FA3B48100B28A30 /* DJI BLE Control Watch App */;
-			targetProxy = 329F41512FA3B48100B28A30 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		329F415A2FA3B48200B28A30 /* Debug */ = {
@@ -317,6 +249,10 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = "DJI BLE Control";
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "用于通过蓝牙发现并连接 DJI Action 相机。";
+				INFOPLIST_KEY_NSBluetoothPeripheralUsageDescription = "用于通过蓝牙向 DJI Action 相机发送控制命令。";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "需要使用您的位置信息来为DJI相机添加GPS坐标记录。";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "需要使用您的位置信息来为DJI相机添加GPS坐标记录。";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKWatchOnly = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -335,7 +271,7 @@
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 26.4;
+				WATCHOS_DEPLOYMENT_TARGET = 26.0;
 			};
 			name = Debug;
 		};
@@ -349,6 +285,8 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = "DJI BLE Control";
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "用于通过蓝牙发现并连接 DJI Action 相机。";
+				INFOPLIST_KEY_NSBluetoothPeripheralUsageDescription = "用于通过蓝牙向 DJI Action 相机发送控制命令。";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKWatchOnly = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -368,40 +306,7 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				VALIDATE_PRODUCT = YES;
-				WATCHOS_DEPLOYMENT_TARGET = 26.4;
-			};
-			name = Release;
-		};
-		329F41612FA3B48200B28A30 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				INFOPLIST_KEY_CFBundleDisplayName = "DJI BLE Control";
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "kassing.DJI-BLE-Control";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SWIFT_APPROACHABLE_CONCURRENCY = YES;
-				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				SWIFT_VERSION = 5.0;
-			};
-			name = Debug;
-		};
-		329F41622FA3B48200B28A30 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				INFOPLIST_KEY_CFBundleDisplayName = "DJI BLE Control";
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "kassing.DJI-BLE-Control";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SWIFT_APPROACHABLE_CONCURRENCY = YES;
-				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				SWIFT_VERSION = 5.0;
-				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 26.0;
 			};
 			name = Release;
 		};
@@ -422,15 +327,6 @@
 			buildConfigurations = (
 				329F415D2FA3B48200B28A30 /* Debug */,
 				329F415E2FA3B48200B28A30 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		329F41602FA3B48200B28A30 /* Build configuration list for PBXNativeTarget "DJI BLE Control" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				329F41612FA3B48200B28A30 /* Debug */,
-				329F41622FA3B48200B28A30 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -1,0 +1,36 @@
+# macOS
+.DS_Store
+
+# Xcode user state
+*.xcuserstate
+*.xcuserdata/
+xcuserdata/
+*.moved-aside
+
+# Xcode build products
+build/
+DerivedData/
+*.app
+*.dSYM
+*.xcarchive
+*.ipa
+
+# Signing and provisioning secrets
+*.mobileprovision
+*.provisionprofile
+*.p12
+*.cer
+*.key
+*.certSigningRequest
+
+# Local agent/editor state
+.claude/
+.codex/
+
+# Local device logs, captures, and reference dumps
+*.xcresult
+*.log
+*.trace
+*.pcap
+*.pcapng
+DJI OSMO GPS CTRL/

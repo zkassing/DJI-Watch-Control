@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct DJI_BLE_Control_Watch_AppApp: App {
+    @State private var bleManager = DJIActionBLEManager()
+
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environment(bleManager)
         }
     }
 }
